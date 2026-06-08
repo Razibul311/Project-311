@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Razibul Islam Portfolio</title>
+
+<style>
+:root{
+    --gray:#6b7280;
+    --green:#10b981;
+    --orange:#f97316;
+    --pink:#ec4899;
+    --purple:#8b5cf6;
+    --white:#ffffff;
+    --yellow:#facc15;
+    --black:#111827;
+    --blue:#3b82f6;
+    --primary-gradient-start: #2563eb;
+    --primary-gradient-end: #06b6d4;
+    --accent-gradient-start: #f59e0b;
+    --accent-gradient-end: #ef4444;
+    --card-bg-light: rgba(37, 99, 235, 0.1);
+    --hover-bg: rgba(37, 99, 235, 0.25);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    overflow-x:hidden;
+    width:100%;
+}
+
+header{
+    background:linear-gradient(90deg, #0f172a, #1e293b);
+    padding:13px 0;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 4px 20px rgba(0,0,0,0.2);
+    width:100%;
+}
+
+nav{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.logo{
+    background: linear-gradient(135deg, #387ef8, #f8bf81);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size:1.5rem;
+    font-weight:bold;
+}
+
+.logo span{
+    background: linear-gradient(135deg, #9715fa, #f97316);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+nav ul{
+    list-style:none;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+nav ul li{
+    margin-left:20px;
+}
+
+nav ul li a{
+    color:#656563;
+    text-decoration:none;
+    font-weight:bold;
+    transition:0.3s;
+    padding:8px 12px;
+    border-radius:8px;
+}
+
+nav ul li a:hover{
+    color:#38bdf8;
+    background:rgba(56, 189, 248, 0.1);
+}
+
+nav ul li a.active{
+    color:#38bdf8;
+    border-bottom:2px solid #38bdf8;
+}
+
+
+#home_id{
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color:#ffffff;
+    padding:80px 20px;
+    width:100%;
+    position:relative;
+    overflow:hidden;
+}
+#home_id{
+    background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' opacity='0.05'%3E%3Cpath fill='white' d='M20,20 L30,20 L25,30 Z M70,70 L80,70 L75,80 Z M45,45 L55,45 L50,55 Z'/%3E%3C/svg%3E"),
+    linear-gradient(135deg,#0f172a,#1e293b);
+    background-repeat: repeat;
+}
+
+.floating-icon {
+    position: absolute;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 1;
+}
+.icon-1 { top: 10%; left: 5%; width: 60px; animation: float 6s ease-in-out infinite; }
+.icon-2 { bottom: 15%; right: 8%; width: 80px; animation: float 8s ease-in-out infinite reverse; }
+.icon-3 { top: 20%; right: 15%; width: 50px; animation: float 7s ease-in-out infinite 1s; }
+.icon-4 { bottom: 25%; left: 10%; width: 55px; animation: float 5s ease-in-out infinite 0.5s; }
+.icon-5 { top: 50%; left: 20%; width: 40px; animation: float 9s ease-in-out infinite; }
+.icon-6 { bottom: 40%; right: 20%; width: 45px; animation: float 6.5s ease-in-out infinite 0.8s; }
+
+@keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+.RZ img{
+    width:180px;
+    height:180px;
+    border-radius:50%;
+    border:4px solid #f8f838;
+    margin-bottom:20px;
+    object-fit:cover;
+    transition:transform 0.3s;
+    position:relative;
+    z-index:2;
+}
+
+.RZ img:hover{
+    transform:scale(1.05);
+}
+
+.RZ h1{
+    margin-bottom:10px;
+    font-size:40px;
+    position:relative;
+    z-index:2;
+}
+
+
+.home-student-text{
+    font-size:1.9rem;
+    margin-top:15px;
+    margin-bottom:10px;
+    font-weight:500;
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+
+.home-student-text::after,
+#home_id h2::after{
+    display:none !important;
+    content:none !important;
+}
+
+
+section > h2{
+    text-align:center;
+    margin-bottom:60px;
+    font-size:2.2rem;
+    position:relative;
+    display:inline-block;
+    left:50%;
+    transform:translateX(-50%);
+    padding-bottom:15px;
+}
+section > h2::after{
+    content:'';
+    position:absolute;
+    bottom:0;
+    left:25%;
+    width:50%;
+    height:3px;
+    background:linear-gradient(90deg, #8e6e1c, #772aae);
+    border-radius:3px;
+}
+
+
+#about_id, #education_id, #skill_id, #project_id, #contact_id, #experience_id{
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color:#ffffff;
+    padding:80px 5%;
+    width:100%;
+    position:relative;
+}
+
+.section-decoration {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    width: 100px;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+.section-decoration-left {
+    position: absolute;
+    top: 50px;
+    left: 20px;
+    width: 80px;
+    opacity: 0.08;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about_class{
+    max-width:1200px;
+    margin:0 auto;
+    text-align:justify;
+    line-height:1.8;
+    font-size:18px;
+    padding:40px;
+    background:rgba(56, 189, 248, 0.08);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    border:1px solid rgba(56, 189, 248, 0.2);
+    transition:transform 0.3s;
+    position:relative;
+    z-index:2;
+}
+
+.about_class:hover{
+    transform:translateY(-5px);
+}
+
+
+.education-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(310px, 1fr));
+    gap:30px;
+    max-width:1200px;
+    margin:0 auto;
+    position:relative;
+    z-index:2;
+}
+
+.edu-card{
+    background:rgba(56, 189, 248, 0.08);
+    backdrop-filter:blur(10px);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:all 0.3s;
+    border:1px solid rgba(56, 189, 248, 0.2);
+    cursor:pointer;
+}
+
+.edu-card:hover{
+    transform:translateY(-8px);
+    background:rgba(56, 189, 248, 0.15);
+    border-color: #38bdf8;
+    transition:all 0.5s;
+}
+
+
+.edu-card h3{
+    font-size:1.5rem;
+    margin-bottom:10px;
+    color:#38bdf8;
+}
+
+.edu-card .institute{
+    color:#818cf8;
+    font-weight:bold;
+    margin:10px 0;
+}
+
+.edu-card .year{
+    color:#d1d7b0;
+    font-size:15px;
+}
+
+.edu-card .result{
+    margin-top:15px;
+    padding:8px 16px;
+    background:rgba(16, 185, 129, 0.15);
+    border-radius:30px;
+    display:inline-block;
+    font-weight:bold;
+    color:#10b981;
+}
+
+
+.experience-container{
+    max-width: 1000px;
+    margin: 0 auto;
+    position:relative;
+    z-index:2;
+}
+
+.experience-item{
+    background: rgba(56, 189, 248, 0.05);
+    backdrop-filter: blur(8px);
+    border-radius: 24px;
+    padding: 32px;
+    margin-bottom: 30px;
+    border: 1px solid rgba(56, 189, 248, 0.2);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    position:relative;
+    overflow:hidden;
+}
+
+.experience-item:hover{
+    transform: translateY(-6px);
+    background: rgba(56, 189, 248, 0.12);
+    border-color: #38bdf8;
+}
+
+.experience-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.experience-date{
+    font-size: 1rem;
+    color: #10b981;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    background: rgba(16, 185, 129, 0.15);
+    padding: 4px 12px;
+    border-radius: 30px;
+}
+
+.experience-title{
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #facc15;
+    margin-bottom: 8px;
+}
+
+.experience-subtitle{
+    font-size: 1.1rem;
+    color: #38bdf8;
+    font-weight: 500;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.experience-subtitle::before{
+    content: "▹";
+    color: #facc15;
+    font-size: 1rem;
+}
+
+.experience-list{
+    list-style: none;
+    padding-left: 0;
+}
+
+.experience-list li{
+    margin: 12px 0;
+    padding-left: 24px;
+    position: relative;
+    line-height: 1.6;
+    color: #cbd5e1;
+    font-size: 1rem;
+}
+
+.experience-list li::before{
+    content: "•";
+    color: #38bdf8;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 6px;
+    top: -1px;
+}
+
+.small-boxs{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));
+    gap:25px;
+    max-width:1300px;
+    margin:0 auto;
+    position:relative;
+    z-index:2;
+}
+
+.small-box{
+    padding:28px;
+    border-radius:20px;
+    text-align:center;
+    background:rgba(56, 189, 248, 0.08);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(56, 189, 248, 0.2);
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.small-box:hover{
+    background:linear-gradient(135deg, #2563eb, #06b6d4);
+    transform:translateY(-8px) scale(1.02);
+}
+
+.small-box h3{
+    font-size:1.4rem;
+    margin-bottom:10px;
+    color:#facc15;
+}
+
+.skill-info{
+    display:none;
+    margin-top:15px;
+    font-size:14px;
+    line-height:1.6;
+    color:#e2e8f0;
+}
+
+.small-box:hover .skill-info{
+    display:block;
+    animation:fadeIn 0.3s ease;
+}
+
+
+.skill-percent {
+    margin-top: 15px;
+    text-align: left;
+}
+.skill-percent span {
+    font-size: 12px;
+    color: #94a3b8;
+    display: block;
+    margin-bottom: 5px;
+}
+.progress-bar {
+    background: rgba(255,255,255,0.15);
+    border-radius: 10px;
+    height: 8px;
+    overflow: hidden;
+}
+.progress-fill {
+    background: linear-gradient(90deg, #2c7594, #b09b46);
+    width: 0%;
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease;
+}
+.small-box:hover .progress-fill {
+    width: var(--percent) !important;
+}
+
+
+.projects-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(350px, 1fr));
+    gap:30px;
+    max-width:1400px;
+    margin:0 auto;
+    position:relative;
+    z-index:2;
+}
+
+.project{
+    padding:30px;
+    border-radius:20px;
+    background:rgba(56, 189, 248, 0.08);
+    backdrop-filter:blur(8px);
+    border:1px solid rgba(56, 189, 248, 0.2);
+    transition:0.4s;
+    cursor:pointer;
+}
+
+.project:hover{
+    background:linear-gradient(135deg, #2563eb, #06b6d4);
+    transform:translateY(-8px);
+    border-color: #38bdf8;
+}
+
+.project h3{
+    font-size:1.3rem;
+    margin-bottom:15px;
+    color:#facc15;
+}
+
+.project-info{
+    display:none;
+    margin-top:15px;
+    font-size:14px;
+    line-height:1.7;
+    color:#e2e8f0;
+}
+
+.project-info i{
+    font-style:normal;
+    display:block;
+    margin:8px 0;
+    padding-left:10px;
+    border-left:3px solid #38bdf8;
+}
+
+.project:hover .project-info{
+    display:block;
+    animation:fadeIn 0.3s ease;
+}
+
+
+.contact-container{
+    max-width:600px;
+    margin:0 auto;
+    background:rgba(56, 189, 248, 0.08);
+    backdrop-filter:blur(10px);
+    border-radius:30px;
+    padding:40px;
+    position:relative;
+    z-index:2;
+}
+
+.contact-detail{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:15px;
+    margin:20px 0;
+    padding:15px;
+    border-radius:50px;
+    background:rgba(56, 189, 248, 0.05);
+    transition:0.3s;
+    flex-wrap:wrap;
+}
+
+.contact-detail:hover{
+    background:rgba(56, 189, 248, 0.15);
+    transform:translateX(10px);
+}
+
+.contact-icon-svg {
+    width: 28px;
+    height: 28px;
+    filter: drop-shadow(0 0 2px rgba(56, 189, 248, 0.5));
+}
+
+.contact-detail a, .contact-detail p{
+    color:white;
+    text-decoration:none;
+    font-size:1rem;
+}
+
+.contact-detail a:hover{
+    color:#facc15;
+}
+
+
+footer{
+    background:linear-gradient(90deg,#0f172a,#1e293b);
+    color:#94a3b8;
+    text-align:center;
+    padding:20px;
+}
+
+
+.scroll-top{
+    position:fixed;
+    bottom:30px;
+    right:30px;
+    background:#2563eb;
+    color:white;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    opacity:0;
+    visibility:hidden;
+    transition:0.3s;
+    z-index:999;
+    border:none;
+    font-size:1.2rem;
+}
+
+.scroll-top.show{
+    opacity:1;
+    visibility:visible;
+}
+
+.scroll-top:hover{
+    background:#06b6d4;
+}
+
+
+.loader{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:#0f172a;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+    transition:opacity 0.5s;
+}
+
+.loader.hide{
+    opacity:0;
+    visibility:hidden;
+}
+
+.spinner{
+    width:50px;
+    height:50px;
+    border:4px solid rgba(56, 189, 248, 0.2);
+    border-top:4px solid #38bdf8;
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+@keyframes spin{
+    0%{transform:rotate(0deg);}
+    100%{transform:rotate(360deg);}
+}
+
+@keyframes fadeIn{
+    from{opacity:0;transform:translateY(10px);}
+    to{opacity:1;transform:translateY(0);}
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px){
+    .small-boxs, .projects-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+    .education-grid{
+        grid-template-columns:repeat(2, 1fr);
+    }
+    .RZ h1{
+        font-size:32px;
+    }
+    .home-student-text{
+        font-size:1.4rem;
+    }
+    .experience-header{
+        flex-direction: column;
+        gap: 10px;
+    }
+    .experience-date{
+        align-self: flex-start;
+    }
+    .floating-icon {
+        opacity: 0.08;
+    }
+}
+
+
+@media (max-width: 767px){
+    nav{
+        flex-direction:column;
+        text-align:center;
+    }
+    nav ul{
+        margin-top:12px;
+        justify-content:center;
+    }
+    nav ul li{
+        margin:5px 8px;
+    }
+    nav ul li a{
+        padding:6px 12px;
+        font-size:14px;
+    }
+    .logo{
+        font-size:1.3rem;
+    }
+    
+    .RZ h1{
+        font-size:24px;
+    }
+    .home-student-text{
+        font-size:1.2rem;
+    }
+    .RZ img{
+        width:130px;
+        height:130px;
+    }
+    
+    section > h2{
+        font-size:1.6rem;
+        margin-bottom:35px;
+    }
+    
+    #about_id, #education_id, #skill_id, #project_id, #contact_id, #experience_id{
+        padding:50px 16px;
+    }
+    
+    .about_class{
+        padding:20px;
+        font-size:14px;
+    }
+    
+    .small-boxs, .projects-grid, .education-grid{
+        grid-template-columns:1fr;
+        gap:18px;
+    }
+    
+    .small-box, .project, .edu-card{
+        padding:20px;
+    }
+    
+    .small-box h3, .project h3, .edu-card h3{
+        font-size:1.2rem;
+    }
+    
+    .skill-info, .project-info{
+        display:block;
+        font-size:13px;
+    }
+    
+    .experience-item{
+        padding: 20px;
+        margin-bottom: 20px;
+    }
+    .experience-title{
+        font-size: 1.3rem;
+    }
+    .experience-subtitle{
+        font-size: 1rem;
+    }
+    .experience-list li{
+        font-size: 0.9rem;
+        padding-left: 20px;
+    }
+    .experience-date{
+        font-size: 0.85rem;
+        margin-top: 5px;
+    }
+    .experience-header{
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .contact-container{
+        padding:25px 15px;
+    }
+    
+    .contact-detail{
+        flex-direction:column;
+        gap:8px;
+    }
+    
+    .scroll-top{
+        width:40px;
+        height:40px;
+        bottom:20px;
+        right:20px;
+    }
+    .floating-icon {
+        opacity: 0.05;
+        width: 35px;
+    }
+    .section-decoration, .section-decoration-left {
+        opacity: 0.05;
+        width: 60px;
+    }
+    .contact-icon-svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+
+@media (max-width: 480px){
+    .RZ h1{
+        font-size:20px;
+    }
+    .home-student-text{
+        font-size:1.1rem;
+    }
+    section > h2{
+        font-size:1.4rem;
+    }
+}
+
+
+@media (hover: none){
+    .skill-info, .project-info{
+        display:block;
+    }
+    .small-box:hover, .project:hover, .edu-card:hover{
+        transform:none;
+    }
+    .progress-fill {
+        width: var(--percent) !important;
+    }
+}
+</style>
+</head>
+<body>
+
+<div class="loader" id="loader">
+    <div class="spinner"></div>
+</div>
+
+<header>
+    <nav>
+        <h2 class="logo">Razibul<span>Portfolio</span></h2>
+        <ul>
+            <li><a href="#home_id" data-nav>Home</a></li>
+            <li><a href="#about_id" data-nav>About</a></li>
+            <li><a href="#education_id" data-nav>Education</a></li>
+            <li><a href="#experience_id" data-nav>Experience</a></li>
+            <li><a href="#skill_id" data-nav>Skills</a></li>
+            <li><a href="#project_id" data-nav>Projects</a></li>
+            <li><a href="#contact_id" data-nav>Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+
+<section id="home_id" class="RZ">
+    <svg class="floating-icon icon-1" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#38bdf8" fill="none"/>
+    </svg>
+    <svg class="floating-icon icon-2" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <circle cx="12" cy="12" r="10" stroke="#facc15" fill="none"/>
+        <path d="M12 2v20M2 12h20" stroke="#facc15" fill="none"/>
+    </svg>
+    <svg class="floating-icon icon-3" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <rect x="2" y="3" width="20" height="14" rx="2" stroke="#10b981" fill="none"/>
+        <line x1="8" y1="21" x2="16" y2="21" stroke="#10b981"/>
+        <line x1="12" y1="17" x2="12" y2="21" stroke="#10b981"/>
+    </svg>
+    <svg class="floating-icon icon-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" stroke="#f97316" fill="none"/>
+    </svg>
+
+    <img src="razibul.jpg" alt="Profile" onerror="this.src='https://via.placeholder.com/180?text=Razibul'">
+    <h1>Welcome to My Portfolio</h1>
+    <h1>I'm Razibul Islam</h1>
+    <h1 class="home-student-text">Student of Computer Science and Engineering</h1>
+    <h1>Varendra University</h1>
+    <p style="margin-top:20px;font-size:1.1rem;">Scroll down to explore my work and journey</p>
+</section>
+
+
+<section id="about_id">
+    <h2>About Me</h2>
+    <div class="about_class">
+        <p>My name is <strong>Md. Razibul Islam</strong>. My hometown is Ullapara in the Sirajganj district, but I have spent most of my life in Rangpur city. I completed my SSC in 2019 and my HSC in 2021 from Border Guard Public School and College, Rangpur. Currently, I am a 3rd-year student in the Department of Computer Science and Engineering at Varendra University.</p><br>
+        <p>I am interested in software development, web development and robotics. I enjoy solving real-world problems through programming and technology. I have participated in various online coding contests such as VJudge, CodeChef and Codeforces. I have solved more than 100 programming problems. My Codeforces rating is 661 (maximum Newbie: 784).</p><br>
+        <p>In the future, I aim to build my career in web development and robotics, where I can apply my knowledge to create useful and innovative solutions.</p>
+    </div>
+</section>
+
+
+<section id="education_id">
+    <h2>Education</h2>
+    <div class="education-grid">
+        <div class="edu-card">
+            <h3>B.Sc in Computer Science & Engineering</h3>
+            <p class="institute">Varendra University, Rajshahi</p>
+            <p class="year">2023 – Present | 3rd Year</p>
+            <p class="result">Current CGPA: 3.25/4.00</p>
+        </div>
+        <div class="edu-card">
+            <h3>Higher Secondary School Certificate (HSC)</h3>
+            <p class="institute">Border Guard Public School & College, Rangpur</p>
+            <p class="year">2019 - 2021</p>
+            <p class="result">GPA: 5.00/5.00</p>
+        </div>
+        <div class="edu-card">
+            <h3>Secondary School Certificate (SSC)</h3>
+            <p class="institute">Border Guard Public School & College, Rangpur</p>
+            <p class="year">2017 - 2019</p>
+            <p class="result">GPA: 5.00/5.00</p>
+        </div>
+    </div>
+</section>
+
+
+<section id="experience_id">
+    <h2>My Experience</h2>
+    <div class="experience-container">
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="experience-date">2023 – Present</span>
+            </div>
+            <div class="experience-title">Competitive Programming</div>
+            <div class="experience-subtitle">Problem Solver | Codeforces & CodeChef</div>
+            <ul class="experience-list">
+                <li>Active participant in online judges: Codeforces (Max rating 784, solved 100+ problems).</li>
+                <li>Participated in VJudge university contests and intra-department programming battles.</li>
+                <li>Strong grasp of algorithms (binary search, sorting, greedy) and data structures.</li>
+                <li>Regular practice of C++ STL and problem-solving strategies for time-efficient solutions.</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="experience-date">2024 – Present</span>
+            </div>
+            <div class="experience-title">University Project Contributor</div>
+            <div class="experience-subtitle">Team Member & Developer</div>
+            <ul class="experience-list">
+                <li>Collaborated on "University Management System" using DBMS (MySQL) and Java frontend.</li>
+                <li>Developed modules for student records, course registration and bus service tracking.</li>
+                <li>Worked with team to design relational schema, complex queries and data validation.</li>
+                <li>Improved understanding of SDLC, version control (Git basics) and documentation.</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="experience-date">2025</span>
+            </div>
+            <div class="experience-title">Web Development</div>
+            <div class="experience-subtitle">Frontend Trainee</div>
+            <ul class="experience-list">
+                <li>Designed responsive portfolio websites using HTML, CSS and JavaScript.</li>
+                <li>Implemented interactive UI components, hover animations and mobile-friendly layouts.</li>
+                <li>Gained practical knowledge of DOM manipulation, event handling and cross-browser compatibility.</li>
+                <li>Built a demo e-commerce frontend (Online Clothing Store) with local storage cart.</li>
+            </ul>
+        </div>
+        <div class="experience-item">
+            <div class="experience-header">
+                <span class="experience-date">2024</span>
+            </div>
+            <div class="experience-title">Robotics Workshop & Competition</div>
+            <div class="experience-subtitle">Arduino Developer</div>
+            <ul class="experience-list">
+                <li>Designed and programmed Line Following Robot using 5-sensor IR array and L298N motor driver.</li>
+                <li>Implemented PID control logic for smoother line tracking and obstacle detection.</li>
+                <li>Presented the project at university tech fest and secured top 5 position.</li>
+                <li>Enhanced hardware-software integration skills, sensor calibration, and embedded C++.</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+
+<section id="skill_id">
+    <h2>Technical Skills</h2>
+    <div class="small-boxs">
+        <div class="small-box" data-percent="80"><h3>C++</h3><div class="skill-percent"><span>Proficiency: 80%</span><div class="progress-bar"><div class="progress-fill" style="--percent: 90%"></div></div></div><p class="skill-info">Strong understanding of C++ programming including object-oriented programming (OOP), data structures, algorithms and problem-solving techniques. Frequently used for competitive programming and academic projects. Comfortable with STL, pointers and memory management.</p></div>
+        <div class="small-box" data-percent="76"><h3>HTML & CSS</h3><div class="skill-percent"><span>Proficiency: 75%</span><div class="progress-bar"><div class="progress-fill" style="--percent: 95%"></div></div></div><p class="skill-info">Used for creating structured semantic web pages with clean layout design, animations, flexbox, grid and responsive design principles. Can build modern, mobile-first websites with cross-browser compatibility.</p></div>
+        <div class="small-box" data-percent="75"><h3>Python</h3><div class="skill-percent"><span>Proficiency: 75%</span><div class="progress-bar"><div class="progress-fill" style="--percent: 75%"></div></div></div><p class="skill-info">Familiar with Python programming for basic scripting, automation, data processing and problem solving. Comfortable with fundamental programming concepts, function and logic building. Used for academic assignments and small projects.</p></div>
+        <div class="small-box" data-percent="60"><h3>JavaScript</h3><div class="skill-percent"><span>Proficiency: 80%</span><div class="progress-bar"><div class="progress-fill" style="--percent: 80%"></div></div></div><p class="skill-info">Used for adding interactivity through DOM manipulation, event handling and modern features for dynamic web applications. Knowledge of async/await, promises and API integration for full-stack development.</p></div>
+        <div class="small-box" data-percent="78"><h3>Java</h3><div class="skill-percent"><span>Proficiency: 78%</span><div class="progress-bar"><div class="progress-fill" style="--percent: 78%"></div></div></div><p class="skill-info">Good understanding of Java programming with focus on object-oriented concepts (inheritance, polymorphism, encapsulation). GUI development using Swing and AWT, building small desktop applications and understanding JVM architecture.</p></div>
+        <div class="small-box" data-percent="85"><h3>SQL & DBMS</h3><div class="skill-percent"><span>Proficiency: 85%</span><div class="progress-bar"><div class="progress-fill" style="--percent: 85%"></div></div></div><p class="skill-info">Knowledge of database management system concepts including normalization, ACID properties, transactions. Writing complex SQL queries (joins, subqueries, aggregate functions), designing relational databases and handling data efficiently using MySQL.</p></div>
+        <div class="small-box" data-percent="65"><h3>Assembly Language</h3><div class="skill-percent"><span>Proficiency: 65%</span><div class="progress-bar"><div class="progress-fill" style="--percent: 65%"></div></div></div><p class="skill-info">Basic knowledge of low-level programming, CPU architecture (registers, memory addressing) and how machine-level instructions work. Understanding of stack, interrupts and basic I/O operations. Helps in understanding computer fundamentals deeply.</p></div>
+        <div class="small-box" data-percent="90"><h3>Microsoft Office</h3><div class="skill-percent"><span>Proficiency: 80%</span><div class="progress-bar"><div class="progress-fill" style="--percent: 90%"></div></div></div><p class="skill-info">Proficient in creating professional documents using MS Word, presentations using PowerPoint, spreadsheets and data analysis using Excel. Used for academic reports, project documentation and creating graphs/charts.</p></div>
+        <div class="small-box" data-percent="88"><h3>Programming</h3><div class="skill-percent"><span>Proficiency: 88%</span><div class="progress-bar"><div class="progress-fill" style="--percent: 88%"></div></div></div><p class="skill-info">Passionate about solving real-world problems through clean, efficient code. Strong foundation in algorithms, data structures, and logical reasoning. Solved 100+ problems across Codeforces, CodeChef, and VJudge. Continuously improving coding skills and participating in online contests.</p></div>
+        <div class="small-box" data-percent="92"><h3>Teamwork</h3><div class="skill-percent"><span>Proficiency: 90%</span><div class="progress-bar"><div class="progress-fill" style="--percent: 92%"></div></div></div><p class="skill-info">Excellent collaboration and communication skills. Experienced in working with cross-functional teams on university projects and group assignments. Proficient in using Git for version control, participating in code reviews, and contributing to team success. Believe in shared goals and collective growth.</p></div>
+    </div>
+</section>
+
+
+<section id="project_id">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+        <div class="project"><h3>Numerical Method Project</h3><div class="project-info"><i>Gaussian Elimination and Gauss-Seidel implementation in C++.</i><i>This project helps to solve systems of linear equations efficiently using numerical techniques.</i><i>It improves understanding of iterative and direct solving methods in computational mathematics.</i><i>Includes matrix operations, convergence analysis and error calculation.</i></div></div>
+        <div class="project"><h3>Online Clothing Store</h3><div class="project-info"><i>E-commerce website developed using HTML, CSS and JavaScript.</i><i>The system allows users to browse products, filter by category, and view product details easily.</i><i>It focuses on basic UI/UX design for an online shopping experience with responsive layout.</i><i>Includes product cart functionality and local storage for saving user selections.</i></div></div>
+        <div class="project"><h3>Line Following Robot</h3><div class="project-info"><i>Arduino based robot using IR Sensor Array (5 sensors) and L298N motor driver.</i><i>The robot can automatically follow a black line on a white surface using PID control algorithm.</i><i>It demonstrates real-time hardware control using sensor input and motor driver with speed control.</i><i>Programmed in Arduino IDE with C++ for embedded systems.</i></div></div>
+        <div class="project"><h3>Electricity Bill Estimator</h3><div class="project-info"><i>JavaScript project for estimating future electricity bill based on consumption history.</i><i>It calculates cost based on unit consumption and predefined slab rates (domestic/commercial).</i><i>This helps users predict monthly electricity expenses and plan energy usage efficiently.</i><i>Includes graphical representation of usage patterns.</i></div></div>
+        <div class="project"><h3>Development of a Basic Calculator Using Java Swing</h3><div class="project-info"><i>A simple Java application designed to perform basic arithmetic operations like addition, subtraction, multiplication and division.</i><i>It provides a user-friendly graphical interface using Swing components (JFrame, JButton, JTextField).</i><i>This project helped in improving problem-solving skills and understanding of core Java logic and event handling.</i><i>Supports keyboard input and error handling for invalid operations.</i></div></div>
+        <div class="project"><h3>University Management System Using Database Management System(DBMS)</h3><div class="project-info"><i>This system is developed to manage university operations such as student records, course management, bus services, library and results.</i><i>It efficiently handles functionalities like student registration, course enrollment, fee management and academic data storage.</i><i>The project focuses on database design and improves practical knowledge of SQL, relational tables and complex query handling.</i><i>Built with MySQL backend and Java frontend for desktop application.</i></div></div>
+        <div class="project"><h3>Moving Car Animation Using Computer Graphics</h3><div class="project-info"><i>A computer graphics project that simulates a moving car animation with background scenery.</i><i>It demonstrates basic graphics functions like line drawing, circle drawing, polygons and animation concepts.</i><i>This project improves understanding of 2D transformations (translation, scaling) and real-time rendering in computer graphics.</i><i>Implemented using OpenGL/GLUT libraries in C++.</i></div></div>
+        <div class="project"><h3>Rock Paper Scissors Game Using C Language </h3><div class="project-info"><i>A simple console-based game built using C programming language with colorful console output.</i><i>It allows user to play against the computer using random choice generation (rand() function).</i><i>This project helps understanding of conditional statements (if-else), loops and logic building in C.</i><i>Player can choose Rock, Paper or Scissors and the result is shown instantly with score tracking for multiple rounds.</i></div></div>
+        <div class="project"><h3>Audio Equalizer using Digital Signal Processing (DSP)</h3><div class="project-info"><i>Digital Signal Processing based Audio Equalizer using MATLAB.</i><i>FFT algorithm for time to frequency domain conversion.</i><i>Digital filters: Low-pass, High-pass, Band-pass using Butterworth/Chebyshev.</i><i>Controls 5 frequency bands from 20Hz to 20kHz.</i></div></div>
+    </div>
+</section>
+
+
+<section id="contact_id">
+    <h2>Contact Me</h2>
+    <div class="contact-container">
+        <div class="contact-detail">
+            <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.5">
+                <rect x="2" y="4" width="20" height="16" rx="2" stroke="currentColor"/>
+                <path d="M22 7l-10 7L2 7" stroke="currentColor"/>
+            </svg>
+            <p>razibul017@gmail.com</p>
+        </div>
+        <div class="contact-detail">
+            <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.5">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" stroke="currentColor"/>
+            </svg>
+            <a href="https://github.com/Razibul311" target="_blank">github.com/Razibul311</a>
+        </div>
+        <div class="contact-detail">
+            <svg class="contact-icon-svg" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="1.5">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" stroke="currentColor"/>
+                <rect x="2" y="9" width="4" height="12" stroke="currentColor"/>
+                <circle cx="4" cy="4" r="2" stroke="currentColor"/>
+            </svg>
+            <a href="https://linkedin.com/in/razibul-islam-b3a3b1322" target="_blank">linkedin.com/in/razibul-islam</a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <p>&copy; 2026 Razibul Islam. All Rights Reserved.</p>
+</footer>
+
+<button class="scroll-top" id="scrollTopBtn">↑</button>
+
+<script>
+window.addEventListener('load', function() {
+    const loader = document.getElementById('loader');
+    setTimeout(() => {
+        loader.classList.add('hide');
+        setTimeout(() => {
+            loader.style.display = 'none';
+        }, 500);
+    }, 500);
+    
+    // Animate progress bars on load
+    document.querySelectorAll('.progress-fill').forEach(bar => {
+        const percent = getComputedStyle(bar).getPropertyValue('--percent').trim();
+        bar.style.width = percent;
+    });
+});
+
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('[data-nav]');
+
+function updateActiveMenu() {
+    let current = '';
+    const scrollPos = window.scrollY + 150;
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
+            current = section.getAttribute('id');
+        }
+    });
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        const href = link.getAttribute('href').substring(1);
+        if (href === current) {
+            link.classList.add('active');
+        }
+    });
+}
+window.addEventListener('scroll', updateActiveMenu);
+updateActiveMenu();
+
+const scrollBtn = document.getElementById('scrollTopBtn');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        scrollBtn.classList.add('show');
+    } else {
+        scrollBtn.classList.remove('show');
+    }
+});
+scrollBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        const target = document.querySelector(targetId);
+        if (target) {
+            const offsetTop = target.offsetTop - 70;
+            window.scrollTo({ top: offsetTop, behavior: 'smooth' });
+        }
+    });
+});
+
+const animateOnScroll = () => {
+    const elements = document.querySelectorAll('.edu-card, .small-box, .project, .about_class, .experience-item');
+    elements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight - 100;
+        if (isVisible) {
+            el.style.opacity = '1';
+            el.style.transform = 'translateY(0)';
+        } else {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+        }
+    });
+};
+document.querySelectorAll('.edu-card, .small-box, .project, .about_class, .experience-item').forEach(el => {
+    el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+    el.style.opacity = '0';
+    el.style.transform = 'translateY(30px)';
+});
+window.addEventListener('scroll', animateOnScroll);
+window.addEventListener('load', animateOnScroll);
+</script>
+</body>
+</html>
